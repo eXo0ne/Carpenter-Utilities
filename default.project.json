@@ -1,0 +1,71 @@
+{
+    "name": "Carpenter",
+    "tree": {
+        "$className": "DataModel",
+
+        "ReplicatedFirst": {
+            "$className": "ReplicatedFirst",
+            "$ignoreUnknownInstances": true,
+            "$path": "src/game/first"
+        },
+
+        "ReplicatedStorage": {
+            "$className": "ReplicatedStorage",
+            "$ignoreUnknownInstances": true,
+
+            "Shared": {
+                "$className": "Folder",
+                "$ignoreUnknownInstances": true,
+                "$path": "src/game/shared"
+            },
+
+            "Carpenter": {
+                "$path": "src/framework/Carpenter.lua",
+                "Settings": {
+                    "$path": "src/framework/Settings.lua"
+                }
+            }
+        },
+
+        "ServerScriptService": {
+            "$className": "ServerScriptService",
+            "$ignoreUnknownInstances": true,
+
+            "Server": {
+                "$className": "Folder",
+                "$ignoreUnknownInstances": true,
+                "$path": "src/game/server",
+
+                "CarpenterServer": {
+                    "$path": "src/framework/Carpenter.server.lua"
+                }
+            }
+        },
+
+        "StarterPlayer": {
+            "$className": "StarterPlayer",
+            "$ignoreUnknownInstances": true,
+
+            "StarterCharacterScripts": {
+                "$className": "StarterCharacterScripts",
+                "$ignoreUnknownInstances": true,
+                "$path": "src/game/character"
+            },
+
+            "StarterPlayerScripts": {
+                "$className": "StarterPlayerScripts",
+                "$ignoreUnknownInstances": true,
+
+                "Client": {
+                    "$className": "Folder",
+                    "$ignoreUnknownInstances": true,
+                    "$path": "src/game/client",
+
+                    "CarpenterClient": {
+                        "$path": "src/framework/Carpenter.client.lua"
+                    }
+                }
+            }
+        }
+    }
+}

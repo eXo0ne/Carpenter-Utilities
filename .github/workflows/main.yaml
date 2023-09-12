@@ -1,0 +1,24 @@
+name: Sawhorse Sanity Check
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+concurrency:
+  group: ${{ github.head_ref || github.run_id  }}
+  cancel-in-progress: true
+  
+jobs:
+  lint:
+    name: Code Integrity
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: NTBBloodbath/selene-action@v1.0.0
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          args: --quiet . --pattern **/!(vendor|external)/*.lua*
