@@ -428,8 +428,10 @@ do
         local characterDumpster = CharacterUtils:GetCharacterDumpster(player)
 
         player.CharacterAdded:Connect(function(character)
-            for _, callback in SpawnCallbacks[player] do
-                callback(character, characterDumpster)
+            if SpawnCallbacks[player] then
+                for _, callback in SpawnCallbacks[player] do
+                    callback(character, characterDumpster)
+                end
             end
         end)
 

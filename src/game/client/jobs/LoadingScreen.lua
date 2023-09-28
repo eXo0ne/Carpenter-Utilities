@@ -44,7 +44,7 @@ local USE_DEFAULT_GUI = false
 -- Whether the loading screen should automatically fade in after asset and
 -- job initialization has completed. If false, the loading screen will remain
 -- visible until `:FadeIn()` is called by some other module.
-local AUTOMATIC_FADE_IN = true
+local AUTOMATIC_FADE_IN = false
 -- The desired CoreGui states to enable after loading
 local CORE_GUI_STATES = {
 	[Enum.CoreGuiType.PlayerList] = true,

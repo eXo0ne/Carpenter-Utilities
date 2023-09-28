@@ -11,7 +11,7 @@
 
 ]]
 
-local PLAY_IN_STUDIO = true
+local PLAY_IN_STUDIO = false
 local SKIP_BUTTON_DELAY = 5
 
 local RunService = game:GetService("RunService")
